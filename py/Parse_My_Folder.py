@@ -18,7 +18,7 @@ def Copy_files_by_extension(source_dir):
             ext = "no_extension"
         creation_time = os.path.getctime(file_path)
         year_month = datetime.fromtimestamp(creation_time).strftime("%Y-%m") # Get the year and month of the file creation time
-        ext_date_folder = os.path.join(source_dir, ext, year_month)                      # Create a new directory for the file extension if it doesn't exist
+        ext_date_folder = os.path.join(source_dir, ext, year_month)          # Create a new directory for the file extension if it doesn't exist
         os.makedirs(ext_date_folder, exist_ok=True)
         destination = os.path.join(ext_date_folder, filename)                # Construct the destination file path
         if not os.path.exists(destination):
